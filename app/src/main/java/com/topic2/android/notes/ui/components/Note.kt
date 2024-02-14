@@ -24,9 +24,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.input.pointer.PointerIconDefaults.Text
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.topic2.android.notes.theme.rwGreen
 
 
@@ -51,8 +54,19 @@ fun Note(){
         Column(modifier = Modifier
             .weight(1f)
             .align(Alignment.CenterVertically)) {
-            Text(text = "Заголовок", maxLines = 1)
-            Text(text = "Содержание", maxLines = 1)
+            Text(text = "Заголовок", maxLines = 1,
+                color = Color.Black,
+                style = TextStyle(
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 16.sp,
+                    letterSpacing = 0.15.sp))
+            Text(text = "Содержание", maxLines = 1,
+                color = Color.Black.copy(alpha = 0.75f),
+                style = TextStyle(
+                    fontWeight = FontWeight.Normal,
+                    fontSize = 14.sp,
+                    letterSpacing = 0.25.sp
+                ))
         }
         Checkbox(
             checked = false,
