@@ -27,6 +27,7 @@ fun NoteColor(){
     Box(
         modifier = Modifier
             .size(40.dp)
+            .padding(4.dp)
             .clip(CircleShape)
             .background(Color.Red)
             .border(
