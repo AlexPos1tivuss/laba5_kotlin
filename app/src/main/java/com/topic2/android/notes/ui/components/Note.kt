@@ -19,11 +19,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.input.pointer.PointerIconDefaults.Text
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.topic2.android.notes.theme.rwGreen
 
 @Composable
-fun NoteColor(){
+fun NoteColor(
+    color: Color,
+    size: Dp,
+    padding: Dp = 0.dp,
+    border: Dp
+){
     Box(
         modifier = Modifier
             .size(40.dp)
@@ -44,7 +50,7 @@ fun NoteColor(){
 @Preview
 @Composable
 fun NoteColorPreview(){
-    NoteColor()
+    NoteColor(color = Color.Red, size = 40.dp, padding = 4.dp, border = 2.dp)
 }
 
 @Composable
