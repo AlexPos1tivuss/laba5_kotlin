@@ -11,10 +11,24 @@ import androidx.compose.material.Checkbox
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIconDefaults.Text
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.topic2.android.notes.theme.rwGreen
+
+@Composable
+fun NoteColor(){
+    Box(
+        modifier = Modifier.size(40.dp).background(Color.Red)
+    )
+}
+
+@Preview
+@Composable
+fun NoteColorPreview(){
+    NoteColor()
+}
 
 @Composable
 fun Note(){
