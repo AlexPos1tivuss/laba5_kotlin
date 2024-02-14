@@ -7,10 +7,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Checkbox
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerIconDefaults.Text
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,7 +22,10 @@ import com.topic2.android.notes.theme.rwGreen
 @Composable
 fun NoteColor(){
     Box(
-        modifier = Modifier.size(40.dp).background(Color.Red)
+        modifier = Modifier
+            .size(40.dp)
+            .clip(CircleShape)
+            .background(Color.Red)
     )
 }
 
