@@ -29,35 +29,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.topic2.android.notes.theme.rwGreen
 
-@Composable
-fun NoteColor(
-    color: Color,
-    size: Dp,
-    padding: Dp = 0.dp,
-    border: Dp
-){
-    Box(
-        modifier = Modifier
-            .size(40.dp)
-            .padding(4.dp)
-            .clip(CircleShape)
-            .background(Color.Red)
-            .border(
-                BorderStroke(
-                    2.dp,
-                    SolidColor(Color.Black)
-
-                ),
-                CircleShape
-            )
-    )
-}
-
-@Preview
-@Composable
-fun NoteColorPreview(){
-    NoteColor(color = Color.Red, size = 40.dp, padding = 4.dp, border = 2.dp)
-}
 
 @Composable
 fun Note(){
@@ -69,6 +40,7 @@ fun Note(){
         .heightIn(min = 64.dp)
         .background(Color.White, backgroundShape)) {
         NoteColor(
+            modifier = Modifier.align(Alignment.CenterVertically),
             color = rwGreen,
             size =40.dp,
             padding =4.dp,
